@@ -6,7 +6,7 @@ RUN apt-get update -y && apt-get install -y \
 RUN pip install\
 	pillow\
 	django-markdown\
-	django-bootstrap-form
+	django-bootstrap-form\
 	django-google-maps
 
 ADD . /app
