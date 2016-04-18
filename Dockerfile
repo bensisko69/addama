@@ -7,6 +7,7 @@ RUN pip install\
 	pillow\
 	django-markdown\
 	django-bootstrap-form
+	django-google-maps
 
 ADD . /app
 WORKDIR /app
