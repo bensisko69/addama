@@ -3,11 +3,10 @@ FROM django:1.9
 RUN pip install --upgrade pip
 RUN apt-get update -y && apt-get install -y \
 	libjpeg-dev
-RUN pip install\
+RUN pip install \
 	pillow\
-	django-markdown\
-	django-bootstrap-form\
-	django-location-field
+	django-markdown \
+	django-bootstrap3
 
 ADD . /app
 WORKDIR /app
