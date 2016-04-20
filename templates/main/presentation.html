@@ -1,0 +1,24 @@
+{% extends "main/base.html" %}
+{% load django_markdown %}
+{% block body %}
+{% for Presentation in obj %}
+<div class="row" style="margin-bottom: 20px">
+	<div>
+		<div class="col-xs-6">
+			<p>{{ Presentation.left|markdown }}</p>
+		</div>
+		<div class="col-xs-6">
+			<img class="img-rounded" src= {{ Presentation.file1.url }} style="max-width: 100%; display: block; margin-left: auto; margin-right: auto">
+		</div>
+	</div>
+	<div class="col-xs-12" style="margin-top: 20px">
+		<div class="col-xs-6">
+			<img class="img-rounded" src= {{ Presentation.file2.url }} style="max-width: 100%; display: block; margin-left: auto; margin-right: auto">
+		</div>
+		<div class="col-xs-6">
+			<p>{{ Presentation.right|markdown }}</p>
+		</div>
+	</div>
+</div>
+{% endfor %}
+{% endblock body %}

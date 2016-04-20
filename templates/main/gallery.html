@@ -1,0 +1,21 @@
+{% extends "main/base.html" %}
+{% load django_markdown %}
+{% block body %}
+<div class="row" style="margin-bottom: 20px">
+	<div class="col-xs-12">
+		<h2 style="text-align: center;">Gallerie</h2>
+	</div>
+	<div class="col-xs-12">
+	{% for Gallery in obj %}
+			<div class="col-sm-6 col-md-4" style="height: 100%">
+					<div class="thumbnail">
+						<img class="img-rounded img-responsive" src= {{ Gallery.file.url }}>
+						<div class="caption">
+							<p style=" word-wrap: break-word;">{{ Gallery.text|markdown }}</p>
+						</div>
+				</div>
+			</div>
+	{% endfor %}
+	</div>
+</div>
+{% endblock body %}
