@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^brise', views.brise, name='brise'),
     url(r'^tornade', views.tornade, name='tornade'),
     url(r'^blizard', views.blizard, name='blizard'),
-    url(r'^mention', views.mention, name='mention')
+    url(r'^mention', views.mention, name='mention'),
+    url(r'^reservation', views.reservation, name='reservation')
     ]

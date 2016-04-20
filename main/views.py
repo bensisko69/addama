@@ -29,6 +29,9 @@ def contact(request):
 
     return render(request, 'main/contact.html', {'form':form})
 
+def reservation(request):
+    return render(request, 'main/reservation.html')
+
 def zephir(request):
     obj = Service.objects.filter(page='zephir')
     return render(request, 'main/zephir.html', {'obj':obj})
