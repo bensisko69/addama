@@ -4,10 +4,13 @@
 {% block body %}
 <div class="row" style="margin-bottom: 20px">
   {% for Tarif in obj %}
-    <div class="col-xs-12">
-    	<p>{{ Tarif.titre|markdown }}</p>
-    	<p style=" word-wrap: break-word;">{{ Tarif.detail|markdown }}</p>
-    	<p>{{ Tarif.prix|markdown }}</p>
+    <div class="col-xs-6">
+    	<p>{{ Tarif.titleText|markdown }}</p>
+    	<p style=" word-wrap: break-word;">{{ Tarif.text|markdown }}</p>
+    </div>
+    <div class="col-xs-6">
+    	<p>{{ Tarif.titleTarif|markdown }}</p>
+    	<p style=" word-wrap: break-word;">{{ Tarif.text|markdown }}</p>
     </div>
   {% endfor %}
 </div>
