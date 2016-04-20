@@ -7,8 +7,8 @@
 # -v $PWD:/app partage du dossier courant avec le conteneur
 # -p exposition du port 9999 du conteneur vers le port 80 du host
 # -d lance le conteneur en arrière plan (detached)
-    docker run -it bensisko/base -v $PWD:/app django-admin startproject $1
-    docker run -it bensisko/base -v $PWD:/app python manage.py startapp main
+    docker run -it -v $PWD:/app bensisko/base django-admin startproject $1 /app
+    docker run -it -v $PWD:/app bensisko/base python manage.py startapp main
     docker run --name base -d -it -v $PWD:/app -p 80:9999 bensisko/base
 
 
