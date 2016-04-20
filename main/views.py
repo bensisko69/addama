@@ -3,7 +3,7 @@ from django.forms import forms
 from django.core.mail import send_mail
 from django.conf import settings
 
-from .forms import ContactForm, TemoignageForm
+from .forms import ContactForm
 from .models import Presentation, Tarif, Partenaires, Gallery, Service, Mention
 
 def accueil(request):
