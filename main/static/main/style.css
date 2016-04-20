@@ -8,8 +8,8 @@ body {
 }
 
 .btn-primary{
-    background-color: #DFF2FF;
-    border-color: hsl(9, 59%, 50%);
+    background-color: #77B5FE;
+    border-color:  #DFF2FF;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
