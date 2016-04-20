@@ -2,7 +2,7 @@ from django.forms import ModelForm, Textarea
 from django_markdown.fields import MarkdownFormField
 from django_markdown.widgets import MarkdownWidget
 from django import forms
-from .models import Contact, Temoignage
+from .models import Contact
 
 class ContactForm(ModelForm):
     class Meta:
@@ -10,14 +10,6 @@ class ContactForm(ModelForm):
         exclude = ('validate',)
         widgets = {
             'question' : Textarea(attrs={'cols': 60, 'rows': 10}),
-        }
-
-class TemoignageForm(ModelForm):
-    class Meta:
-        model = Temoignage
-        exclude = ('validate',)
-        widgets = {
-            'comment' : Textarea(attrs={'cols': 60, 'rows': 10}),
         }
 
 class MyCustomForm(forms.Form):

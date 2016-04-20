@@ -3,9 +3,11 @@ from django_markdown.models import MarkdownField
 # Create your models here.
 
 NAME_PAGE = (
-    ('education', 'education'),
-    ('reeducation', 'reeducation'),
-    ('promenade', 'promenade'),
+    ('zephir', 'zephir'),
+    ('brise', 'brise'),
+    ('sirocoo', 'sirocoo'),
+    ('tornade', 'tornade'),
+    ('blizard', 'blizard'),
     )
 
 class Contact(models.Model):
@@ -24,8 +26,7 @@ class Contact(models.Model):
         return self.nom
 
 class Presentation(models.Model):
-    left = models.TextField(max_length=900)
-    right = models.TextField(max_length=900)
+    text = models.TextField(max_length=900)
     file1 = models.FileField(upload_to='main/static/img/presentation')
     file2 = models.FileField(upload_to='main/static/img/presentation')
 
@@ -40,19 +41,6 @@ class Tarif(models.Model):
 
     def __unicode__ (self):
         return self.titre
-
-class Temoignage(models.Model):
-    titre = models.CharField(max_length=100)
-    nom = models.CharField(max_length=100)
-    commentaire = models.TextField(max_length=600)
-    file = models.ImageField(upload_to='media/main/img/temoignage', default='media/main/img/temoignage/img1.png')
-    validate = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.nom
-
-    def __unicode__(self):
-        return self.nom
 
 class Partenaires(models.Model):
     file = models.ImageField(upload_to='main/static/img/partenaires')
@@ -78,8 +66,7 @@ class Gallery(models.Model):
 
 class Service(models.Model):
     page = models.CharField(choices=NAME_PAGE, max_length=100)
-    left = models.TextField(max_length=900)
-    right = models.TextField(max_length=900)
+    text = models.TextField(max_length=900)
     file1 = models.FileField(upload_to='main/static/img/text')
     file2 = models.FileField(upload_to='main/static/img/text')
 
