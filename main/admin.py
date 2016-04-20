@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.db import models
 from django_markdown.admin import MarkdownModelAdmin
 
-from .models import Contact, Presentation, Tarif, Temoignage, Partenaires, Gallery, Service, MyModel, Mention
+from .models import Contact, Presentation, Tarif, Partenaires, Gallery, Service, MyModel, Mention
 
 class ContactAdmin(admin.ModelAdmin):
     model = Contact
@@ -17,11 +17,6 @@ class TarifAdmin(admin.ModelAdmin):
     list_display = ('titre', 'prix', 'validate')
     list_filter = ['validate']
 
-class TemoignageAdmin(admin.ModelAdmin):
-    model = Temoignage
-    list_display = ('nom', 'validate')
-    list_filter = ['validate']
-
 class PartenairesfAdmin(admin.ModelAdmin):
     model = Partenaires
 
@@ -34,7 +29,6 @@ class ServiceAdmin(admin.ModelAdmin):
 class MentionAdmin(admin.ModelAdmin):
     model = Mention
 
-admin.site.register(Temoignage, TemoignageAdmin)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Presentation, PresentationAdmin)
 admin.site.register(Tarif, TarifAdmin)
