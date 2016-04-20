@@ -31,12 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_markdown',
+    'bootstrap3',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -48,6 +51,9 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    "django.core.files.uploadhandler.MemoryFileUploadHandler",
+    "django.core.files.uploadhandler.TemporaryFileUploadHandler"
 ]
 
 ROOT_URLCONF = 'addama.urls'
@@ -104,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Paris'
 
 USE_I18N = True
 
@@ -119,3 +125,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = (
+        os.path.join(BASE_DIR, "static")
+    )
+
+MEDIA_URL = '/media/'
+
+# Markdown
+MARKDOWN_EDITOR_SKIN = 'simple'
+
+FILE_UPLOAD_MAX_MEMORY_SIZE = 5000000
+
+#email
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'loicrg69@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+SERVER_EMAIL = 'loicrg69@gmail.com'
+EMAIL_FILE_PATH = ''
+EMAIL_HOST_PASSWORD = 'Loicrg691986'
