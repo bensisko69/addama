@@ -1,0 +1,37 @@
+
+p{
+    font-size: 15px;
+}
+
+body {
+  font-family: Times New Roman, Time, serif;
+}
+
+.btn-primary{
+    background-color: rgb(232, 90, 64);
+    border-color: hsl(9, 59%, 50%);
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background-color: #CC513B;
+}
+
+a {
+    color: #000000;
+}
+
+.thumbnail{
+    background-color: #BFBCBC;
+    border: 1px solid #D6D1D1;
+}
+
+h4{
+    color: red;
+    font-style: bold
+}
+
+h2{
+    color: red;
+    font-style: bold
+}
+
