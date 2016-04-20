@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django_markdown',
     'bootstrap3',
-    'location_field.apps.DefaultConfig'
 ]
 
 MIDDLEWARE_CLASSES = [
