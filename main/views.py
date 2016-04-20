@@ -54,7 +54,7 @@ def brise(request):
     return render(request, 'main/brise.html', {'obj':obj})
 
 def tarifs(request):
-    obj = Tarif.objects.filter(validate=True)
+    obj = Tarif.objects.all
     return render(request, 'main/tarifs.html', {'obj':obj})
 
 def gallery(request):

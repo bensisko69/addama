@@ -34,16 +34,10 @@ class Presentation(models.Model):
     file2 = models.FileField(upload_to='main/static/img/presentation')
 
 class Tarif(models.Model):
-    titre = models.CharField(max_length=100)
-    detail = models.TextField(max_length=600)
-    prix = models.CharField(max_length=10)
-    validate = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.titre
-
-    def __unicode__ (self):
-        return self.titre
+    titleText = models.CharField(max_length=100)
+    text = models.TextField(max_length=1000)
+    titleTarif = models.CharField(max_length=100)
+    tarif = models.TextField(max_length=1000)
 
 class Partenaires(models.Model):
     file = models.ImageField(upload_to='main/static/img/partenaires')

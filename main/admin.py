@@ -14,8 +14,10 @@ class PresentationAdmin(admin.ModelAdmin):
 
 class TarifAdmin(admin.ModelAdmin):
     model = Tarif
-    list_display = ('titre', 'prix', 'validate')
-    list_filter = ['validate']
+    fieldsets = (
+        ('Tarif', {'fields':('titleTarif', 'tarif')}),
+        ('Text', {'fields':('titleText', 'text')})
+        )
 
 class PartenairesfAdmin(admin.ModelAdmin):
     model = Partenaires
