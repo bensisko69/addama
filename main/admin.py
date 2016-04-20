@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.db import models
 from django_markdown.admin import MarkdownModelAdmin
 
-from .models import Contact, Presentation, Tarif, Partenaires, Gallery, Service, MyModel, Mention
+from .models import Contact, Presentation, Tarif, Partenaires, Gallery, Service, MyModel, Mention, Reservation
 
 class ContactAdmin(admin.ModelAdmin):
     model = Contact
@@ -29,6 +29,9 @@ class ServiceAdmin(admin.ModelAdmin):
 class MentionAdmin(admin.ModelAdmin):
     model = Mention
 
+class ReservationAdmin(admin.ModelAdmin):
+    model = Reservation
+
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Presentation, PresentationAdmin)
 admin.site.register(Tarif, TarifAdmin)
@@ -37,3 +40,4 @@ admin.site.register(Gallery, GalleryAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(MyModel, MarkdownModelAdmin)
 admin.site.register(Mention, MentionAdmin)
+admin.site.register(Reservation, ReservationAdmin)

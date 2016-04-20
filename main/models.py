@@ -25,6 +25,9 @@ class Contact(models.Model):
     def __unicode__ (self):
         return self.nom
 
+class Reservation(models.Model):
+    text = models.TextField(max_length=900)
+
 class Presentation(models.Model):
     text = models.TextField(max_length=900)
     file1 = models.FileField(upload_to='main/static/img/presentation')
