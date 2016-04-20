@@ -2,8 +2,13 @@
 {% block body %}
 {% load django_markdown %}
 <div class="row">
-<div class="col-xs-offset-3 col-xs-6">
-	<iframe width='640' height='390' frameborder='0' border='0' src='http://widget.itea.fr/widget_itea_resa.html?key=yirx2ld1&numgite=G275510&nbmois=3' style='overflow:auto;-webkit-overflow-scrolling:touch' ></iframe>
-</div>
+	{% for Reservation in obj %}
+		<div class="col-xs-12">
+		<p>{{ Reservation.text }}</p>
+		</div>
+	{% endfor %}
+	<div class="col-xs-offset-3 col-xs-6">
+		<iframe width='640' height='390' frameborder='0' border='0' src='http://widget.itea.fr/widget_itea_resa.html?key=yirx2ld1&numgite=G275510&nbmois=3' style='overflow:auto;-webkit-overflow-scrolling:touch' ></iframe>
+	</div>
 </div>
 {% endblock body %}
