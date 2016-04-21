@@ -77,5 +77,5 @@ def mention(request):
     return render(request, 'main/mention.html', {'obj':obj})
 
 def rejoindre(request):
-    obj = Rejoindre.object.all()
+    obj = Rejoindre.objects.all()
     return render(request, 'main/rejoindre.html', {'obj':obj})
