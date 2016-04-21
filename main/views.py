@@ -4,10 +4,10 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 from .forms import ContactForm
-from .models import Presentation, Tarif, Partenaires, Gallery, Service, Mention, Reservation
+from .models import Presentation, Tarif, Partenaires, Gallery, Service, Mention, Reservation, Rejoindre
 
 def accueil(request):
-    obj = Presentation.objects.all
+    obj = Presentation.objects.all()
     return render(request, 'main/accueil.html', {'obj':obj})
 
 def contact(request):
@@ -37,7 +37,7 @@ def contact(request):
     return render(request, 'main/contact.html', {'form':form})
 
 def reservation(request):
-    obj = Reservation.objects.all
+    obj = Reservation.objects.all()
     return render(request, 'main/reservation.html', {'obj':obj})
 
 def zephir(request):
@@ -75,3 +75,7 @@ def partenaires(request):
 def mention(request):
     obj = Mention.objects.all()
     return render(request, 'main/mention.html', {'obj':obj})
+
+def rejoindre(request):
+    obj = Rejoindre.object.all()
+    return render(request, 'main/rejoindre.html', {'obj':obj})

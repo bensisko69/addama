@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^tornade', views.tornade, name='tornade'),
     url(r'^blizard', views.blizard, name='blizard'),
     url(r'^mention', views.mention, name='mention'),
-    url(r'^reservation', views.reservation, name='reservation')
+    url(r'^reservation', views.reservation, name='reservation'),
+    url(r'^rejoindre', views.rejoindre, name='rejoindre')
     ]

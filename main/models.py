@@ -77,3 +77,6 @@ class MyModel(models.Model):
 
 class Mention(models.Model):
     text = models.TextField(max_length=10000)
+
+class Rejoindre(models.Model):
+    text = models.TextField(max_length=1000)
