@@ -25,9 +25,13 @@ SECRET_KEY = 'jl6%skll26k^0op3h-1lf84l^d=i$dn-w-vy(2)u^(%b%63=_s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+SEND_BROKEN_LINK_EMAILS = True
 
+ALLOWED_HOSTS = ['www.maison-adama.fr', 'www.maison-adama.com']
 
+ADMIN = (('loic renoud-grappin', 'loicrg69@gmail.com'))
+
+MANAGERS = ADMIN
 # Application definition
 
 INSTALLED_APPS = [
@@ -55,7 +59,8 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     "django.core.files.uploadhandler.MemoryFileUploadHandler",
-    "django.core.files.uploadhandler.TemporaryFileUploadHandler"
+    "django.core.files.uploadhandler.TemporaryFileUploadHandler",
+    "django.middleware.common.BrokenLinkEmailsMiddleware"
 ]
 
 ROOT_URLCONF = 'addama.urls'
