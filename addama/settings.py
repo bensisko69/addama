@@ -25,6 +25,8 @@ SECRET_KEY = 'jl6%skll26k^0op3h-1lf84l^d=i$dn-w-vy(2)u^(%b%63=_s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#envoie de mail si page 404
+
 SEND_BROKEN_LINK_EMAILS = True
 
 ALLOWED_HOSTS = ['www.maison-adama.fr', 'www.maison-adama.com']
