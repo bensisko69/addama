@@ -6,7 +6,7 @@ from .models import Contact, Presentation, Tarif, Partenaires, Gallery, Service,
 
 class ContactAdmin(admin.ModelAdmin):
     model = Contact
-    list_display = ('nom', 'codePostal', 'telephone')
+    list_display = ('nom', 'telephone')
     list_filter = ['validate']
 
 class PresentationAdmin(admin.ModelAdmin):

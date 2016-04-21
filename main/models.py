@@ -14,7 +14,6 @@ class Contact(models.Model):
     prenom = models.CharField(max_length=100)
     nom = models.CharField(max_length=100)
     email = models.EmailField(max_length=50)
-    codePostal = models.CharField(max_length=5)
     telephone = models.CharField(max_length=10)
     question = models.TextField(max_length=300)
     validate = models.BooleanField(default=False)
