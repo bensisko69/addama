@@ -14,33 +14,5 @@
 	</form>
 </div>
 </div>
-<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-    <div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div>
-        <div>
-            <small>
-                <a href="http://embedgooglemaps.com"> 
-                    google maps carte
-                </a>
-            </small>
-        </div>
-        <div>
-            <small>
-                <a href="http://youtubeembedcode.com">
-                    embed youtube
-                </a>
-            </small>
-        </div>
-        <style>
-            #gmap_canvas img{max-width:none!important;background:none!important}
-        </style>
-    </div>
-    <script type='text/javascript'>
-    function init_map(){
-        var myOptions = {zoom:10,center:new google.maps.LatLng(48.856614,2.3522219000000177),mapTypeId: google.maps.MapTypeId.ROADMAP};
-        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.856614,2.3522219000000177)});
-        infowindow = new google.maps.InfoWindow({content:'<strong>Titre</strong><br>29 Route du Fort, 01700 Neyron France<br>'});
-        google.maps.event.addListener(marker, 'click', function()
-        {infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-    </script>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.2289333229559!2d4.918534829244271!3d45.81294599869413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQ4JzQ2LjYiTiA0wrA1NScwOC43IkU!5e0!3m2!1sfr!2sfr!4v1461273796438" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 {% endblock body %}
