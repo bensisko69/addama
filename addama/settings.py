@@ -29,7 +29,7 @@ DEBUG = True
 
 SEND_BROKEN_LINK_EMAILS = True
 
-ALLOWED_HOSTS = ['www.maison-adama.fr', 'www.maison-adama.com']
+ALLOWED_HOSTS = ['www.maison-addama.fr', 'www.maison-addama.com']
 
 ADMIN = (('loic renoud-grappin', 'loicrg69@gmail.com'))
 
