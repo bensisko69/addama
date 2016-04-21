@@ -26,7 +26,7 @@ def contact(request):
                 "Votre demande de contact",
                 "Nous repondrons a votre messages dans un delais de 24h maximum",
                 settings.EMAIL_HOST_USER,
-                [POST['email'],],
+                [request.POST['email'],],
                 fail_silently=False
                 )
             form = ContactForm()
