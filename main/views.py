@@ -22,6 +22,13 @@ def contact(request):
                 [settings.EMAIL_HOST_USER,],
                 fail_silently=False
                 )
+            send_mail(
+                "Votre demande de contact",
+                "Nous repondrons a votre messages dans un delais de 24h maximum",
+                settings.EMAIL_HOST_USER,
+                [POST['email'],],
+                fail_silently=False
+                )
             form = ContactForm()
             return render(request, 'main/contact.html', {'form':form})
     else:
