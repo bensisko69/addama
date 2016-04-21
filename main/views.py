@@ -17,14 +17,14 @@ def contact(request):
             form.save()
             send_mail(
                 "Nouvelle demande de contact",
-                "Une nouvelle demande de contact vient d'etre effectue merci d'y repondre'",
+                "Une nouvelle demande de contact vient d'être effectue merci d'y répondre",
                 settings.EMAIL_HOST_USER,
                 [settings.EMAIL_HOST_USER,],
                 fail_silently=False
                 )
             send_mail(
                 "Votre demande de contact",
-                "Nous repondrons a votre messages dans un delais de 24h maximum",
+                "Nous répondrons à votre message dans un délai de 24h maximum",
                 settings.EMAIL_HOST_USER,
                 [request.POST['email'],],
                 fail_silently=False
